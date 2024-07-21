@@ -3,17 +3,37 @@ import pandas as pd
 import altair as alt
 from PIL import Image
 
+# --- page setup ---
+about_page = st.Page(
+    page = "code/about.py",
+    title = "About Me",
+    icon = ":material/person:",
+    default = True,
+)
+project_1_page = st.Page(
+    page = "code/sales_dashboard.py",
+    title = "Sales Dashboard",
+    icon = ":material/sell:",
+    default = True,
+)
+project_2_page = st.Page(
+    page = "code/hr_dashboard.py",
+    title = "HR Dashboard",
+    icon = ":material/person_pin_circle:",
+    default = True,
+)
+
 # Load Images
 profile_image = Image.open("C:/Users/oladi/personal-website/personal-website/images/dimeji.jpg")
-#logo_image = Image.open("/mnt/data/image.png")  # Replace with actual path if different
+logo_image = Image.open("C:/Users/oladi/personal-website/personal-website/images/logo.jpg")  # Replace with actual path if different
 
 # Sidebar
-#st.sidebar.image(logo_image, width=100)
+st.sidebar.image(logo_image, width=100)
 st.sidebar.title("Info")
 project_type = st.sidebar.selectbox("Select Project Type", ["About Me", "Data Analysis", "Predictions", "Chat Bot"])
 
 # Main content
-#st.image(logo_image, width=100)
+st.image(logo_image, width=100)
 st.markdown("# CodingIsFun")
 st.markdown("### Empowering enterprises with data-driven solutions")
 
