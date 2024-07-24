@@ -5,47 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Scientist Portfolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k6tgDDFB9m8N6p6+MC5+7Fg6nE7mP4aQK8fnHA5jF1++qK5eUM7f0o62Fcb7ZuoGhF0d4Os5fTXLg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hover-effect:hover {
+            background-color: #1d4ed8;
+            color: #ffffff;
+        }
+        .hover-effect:hover i {
+            color: #ffffff;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tab-button {
+            cursor: pointer;
+        }
+        .tab-button.active {
+            border-bottom: 2px solid #1d4ed8;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
     <header class="bg-white shadow-md">
         <div class="container mx-auto p-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Data Scientist Portfolio</h1>
+            <h1 class="text-2xl font-bold text-blue-700">Data Scientist Portfolio</h1>
             <nav>
-                <a href="#about" class="px-4">About</a>
-                <a href="#skills" class="px-4">Skills</a>
-                <a href="#projects" class="px-4">Projects</a>
-                <a href="#experience" class="px-4">Experience</a>
-                <a href="#certifications" class="px-4">Certifications</a>
-                <a href="#education" class="px-4">Education</a>
-                <a href="#contact" class="px-4">Contact</a>
-                <a href="https://mhblog.com" class="px-4">Blog</a>
+                <a href="#about" class="px-4 hover:text-blue-700">About</a>
+                <a href="#projects" class="px-4 hover:text-blue-700">Projects</a>
+                <a href="#experience" class="px-4 hover:text-blue-700">Experience</a>
+                <a href="#education" class="px-4 hover:text-blue-700">Education</a>
+                <a href="#contact" class="px-4 hover:text-blue-700">Contact</a>
+                <a href="https://mhblog.com" class="px-4 hover:text-blue-700">Blog</a>
             </nav>
         </div>
     </header>
 
     <main class="container mx-auto p-4">
         <section id="about" class="my-8">
-            <h2 class="text-3xl font-bold mb-4">About Me</h2>
+            <h2 class="text-3xl font-bold text-blue-700 mb-4">About Me</h2>
             <p class="text-lg">I am a data scientist with 25 years of experience in Data Analysis, Data Science, AI Science, Machine Learning, and AI Strategy. I have a proven track record of leveraging data to drive business decisions and strategies.</p>
         </section>
 
-        <section id="skills" class="my-8">
-            <h2 class="text-3xl font-bold mb-4">Skills</h2>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>Data Analysis</li>
-                <li>Data Science</li>
-                <li>AI Science</li>
-                <li>Machine Learning</li>
-                <li>AI Strategy</li>
-            </ul>
-        </section>
-
         <section id="projects" class="my-8">
-            <h2 class="text-3xl font-bold mb-4">Projects</h2>
+            <h2 class="text-3xl font-bold text-blue-700 mb-4">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-white p-4 rounded-md shadow-md">
-                    <h3 class="text-2xl font-bold">Project 1: Predictive Analytics for Retail</h3>
-                    <p class="text-lg">Developed a predictive analytics model to forecast retail sales.</p>
+                <div class="bg-white p-6 rounded-md shadow-md hover-effect">
+                    <h3 class="text-2xl font-bold mb-2">Project 1: Predictive Analytics for Retail</h3>
+                    <p class="text-lg mb-4">Developed a predictive analytics model to forecast retail sales.</p>
                     <ul class="list-disc pl-5">
                         <li><strong>Technologies:</strong> Python, Pandas, Scikit-learn, SQL</li>
                         <li><strong>Role:</strong> Lead Data Scientist</li>
@@ -53,9 +69,9 @@
                     </ul>
                     <a href="https://example.com/project1" class="text-blue-500 underline">View Project</a>
                 </div>
-                <div class="bg-white p-4 rounded-md shadow-md">
-                    <h3 class="text-2xl font-bold">Project 2: Customer Segmentation</h3>
-                    <p class="text-lg">Implemented a customer segmentation algorithm to enhance marketing strategies.</p>
+                <div class="bg-white p-6 rounded-md shadow-md hover-effect">
+                    <h3 class="text-2xl font-bold mb-2">Project 2: Customer Segmentation</h3>
+                    <p class="text-lg mb-4">Implemented a customer segmentation algorithm to enhance marketing strategies.</p>
                     <ul class="list-disc pl-5">
                         <li><strong>Technologies:</strong> R, K-means Clustering, Tableau</li>
                         <li><strong>Role:</strong> Data Scientist</li>
@@ -63,9 +79,9 @@
                     </ul>
                     <a href="https://example.com/project2" class="text-blue-500 underline">View Project</a>
                 </div>
-                <div class="bg-white p-4 rounded-md shadow-md">
-                    <h3 class="text-2xl font-bold">Project 3: Fraud Detection System</h3>
-                    <p class="text-lg">Developed a real-time fraud detection system for a financial services company.</p>
+                <div class="bg-white p-6 rounded-md shadow-md hover-effect">
+                    <h3 class="text-2xl font-bold mb-2">Project 3: Fraud Detection System</h3>
+                    <p class="text-lg mb-4">Developed a real-time fraud detection system for a financial services company.</p>
                     <ul class="list-disc pl-5">
                         <li><strong>Technologies:</strong> Spark, Hadoop, TensorFlow</li>
                         <li><strong>Role:</strong> AI Scientist</li>
@@ -78,29 +94,29 @@
         </section>
 
         <section id="experience" class="my-8">
-            <h2 class="text-3xl font-bold mb-4">Experience</h2>
+            <h2 class="text-3xl font-bold text-blue-700 mb-4">Experience</h2>
             <div class="space-y-4">
-                <div class="bg-white p-4 rounded-md shadow-md">
-                    <h3 class="text-2xl font-bold">Lead Data Scientist – Tech Solutions Inc.</h3>
-                    <p class="text-lg">January 2015 – Present</p>
+                <div class="bg-white p-6 rounded-md shadow-md">
+                    <h3 class="text-2xl font-bold mb-2">Lead Data Scientist – Tech Solutions Inc.</h3>
+                    <p class="text-lg mb-4">January 2015 – Present</p>
                     <ul class="list-disc pl-5">
                         <li>Led a team of data scientists to develop predictive models for various industries.</li>
                         <li>Implemented machine learning algorithms to improve business processes.</li>
                         <li>Presented data-driven insights to stakeholders to drive strategic decisions.</li>
                     </ul>
                 </div>
-                <div class="bg-white p-4 rounded-md shadow-md">
-                    <h3 class="text-2xl font-bold">Senior Data Analyst – Data Insights Corp.</h3>
-                    <p class="text-lg">June 2005 – December 2014</p>
+                <div class="bg-white p-6 rounded-md shadow-md">
+                    <h3 class="text-2xl font-bold mb-2">Senior Data Analyst – Data Insights Corp.</h3>
+                    <p class="text-lg mb-4">June 2005 – December 2014</p>
                     <ul class="list-disc pl-5">
                         <li>Conducted in-depth data analysis to support business intelligence initiatives.</li>
                         <li>Developed and maintained data pipelines and reporting dashboards.</li>
                         <li>Collaborated with cross-functional teams to identify data needs and solutions.</li>
                     </ul>
                 </div>
-                <div class="bg-white p-4 rounded-md shadow-md">
-                    <h3 class="text-2xl font-bold">Data Scientist – Analytics Experts Ltd.</h3>
-                    <p class="text-lg">March 2000 – May 2005</p>
+                <div class="bg-white p-6 rounded-md shadow-md">
+                    <h3 class="text-2xl font-bold mb-2">Data Scientist – Analytics Experts Ltd.</h3>
+                    <p class="text-lg mb-4">March 2000 – May 2005</p>
                     <ul class="list-disc pl-5">
                         <li>Designed and implemented machine learning models for predictive analytics.</li>
                         <li>Provided technical expertise on data analysis and statistical modeling.</li>
@@ -111,28 +127,42 @@
             </div>
         </section>
 
-        <section id="certifications" class="my-8">
-            <h2 class="text-3xl font-bold mb-4">Certifications</h2>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>Certified Data Scientist – ABC Institute</li>
-                <li>Machine Learning Expert – XYZ University</li>
-                <li>AI Strategy Professional – LMN Academy</li>
-                <li>Big Data Specialist – PQR Organization</li>
-                <li>Advanced Analytics Certificate – STU Institute</li>
-            </ul>
-        </section>
-
         <section id="education" class="my-8">
-            <h2 class="text-3xl font-bold mb-4">Education</h2>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>Ph.D. in Computer Science – University of Technology, 2000</li>
-                <li>M.S. in Data Science – Data Science University, 1995</li>
-                <li>B.S. in Statistics – State University, 1993</li>
-            </ul>
+            <h2 class="text-3xl font-bold text-blue-700 mb-4">Education</h2>
+            <div class="flex border-b-2 border-gray-200 mb-4">
+                <button class="tab-button px-4 py-2 text-blue-700 border-b-2 focus:outline-none active" onclick="openTab(event, 'skills')">Skills</button>
+                <button class="tab-button px-4 py-2 text-blue-700 border-b-2 focus:outline-none" onclick="openTab(event, 'education')">Education</button>
+                <button class="tab-button px-4 py-2 text-blue-700 border-b-2 focus:outline-none" onclick="openTab(event, 'certifications')">Certifications</button>
+            </div>
+            <div id="skills" class="tab-content active">
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Data Analysis</li>
+                    <li>Data Science</li>
+                    <li>AI Science</li>
+                    <li>Machine Learning</li>
+                    <li>AI Strategy</li>
+                </ul>
+            </div>
+            <div id="education" class="tab-content">
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Ph.D. in Computer Science – University of Technology, 2000</li>
+                    <li>M.S. in Data Science – Data Science University, 1995</li>
+                    <li>B.S. in Statistics – State University, 1993</li>
+                </ul>
+            </div>
+            <div id="certifications" class="tab-content">
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Certified Data Scientist – ABC Institute</li>
+                    <li>Machine Learning Expert – XYZ University</li>
+                    <li>AI Strategy Professional – LMN Academy</li>
+                    <li>Big Data Specialist – PQR Organization</li>
+                    <li>Advanced Analytics Certificate – STU Institute</li>
+                </ul>
+            </div>
         </section>
 
         <section id="contact" class="my-8">
-            <h2 class="text-3xl font-bold mb-4">Contact</h2>
+            <h2 class="text-3xl font-bold text-blue-700 mb-4">Contact</h2>
             <div class="space-y-4">
                 <form id="contact-form" class="space-y-4">
                     <div>
@@ -147,15 +177,21 @@
                         <label for="message" class="block text-sm font-medium">Message</label>
                         <textarea id="message" name="message" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"></textarea>
                     </div>
-                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Send</button>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700">Send</button>
                 </form>
                 <div class="flex space-x-4">
-                    <a href="https://www.linkedin.com/in/yourprofile" class="text-blue-500 underline">LinkedIn</a>
-                    <a href="https://github.com/yourprofile" class="text-blue-500 underline">GitHub</a>
-                    <a href="https://twitter.com/yourprofile" class="text-blue-500 underline">Twitter</a>
+                    <a href="https://www.linkedin.com/in/yourprofile" class="text-blue-500 hover:text-white hover-effect">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/yourprofile" class="text-blue-500 hover:text-white hover-effect">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://twitter.com/yourprofile" class="text-blue-500 hover:text-white hover-effect">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
                 </div>
                 <div class="mt-4">
-                    <a href="https://mhblog.com" class="text-blue-500 underline">Visit My Blog</a>
+                    <a href="https://mhblog.com" class="text-blue-500 underline hover:text-blue-700">Visit My Blog</a>
                 </div>
             </div>
         </section>
@@ -167,6 +203,20 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function openTab(event, tabId) {
+            var i, tabContent, tabButtons;
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+            tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            document.getElementById(tabId).classList.add("active");
+            event.currentTarget.classList.add("active");
+        }
+    </script>
 </body>
 </html>
