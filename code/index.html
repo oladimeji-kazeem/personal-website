@@ -1,79 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Form To Google Sheets Demo</title>
-  <meta name="description" content="Store HTML form submissions in Google Sheets">
-  <link href="./favicon.png" rel="shortcut icon">
-
-  <link rel="stylesheet" href="main.css">
-  <script src="https://unpkg.com/prefixfree@1.0.0/prefixfree.min.js"></script>
-
-  <script src="https://wzrd.in/standalone/formdata-polyfill@latest"></script>
-  <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
-  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Scientist Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Data Scientist Portfolio</h1>
+            <nav>
+                <a href="#about" class="px-4">About</a>
+                <a href="#skills" class="px-4">Skills</a>
+                <a href="#contact" class="px-4">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-  <div class="form-container">
-    <form name="submit-to-google-sheet">
-      <input name="email" type="email" placeholder="Email" required>
-      <input name="firstName" type="text" placeholder="First Name">
-      <input name="lastName" type="text" placeholder="Last Name">
-      <button type="submit">Subscribe</button>
-    </form>
+    <main class="container mx-auto p-4">
+        <section id="about" class="my-8">
+            <h2 class="text-3xl font-bold mb-4">About Me</h2>
+            <p class="text-lg">I am a data scientist with 25 years of experience in Data Analysis, Data Science, AI Science, Machine Learning, and AI Strategy. I have a proven track record of leveraging data to drive business decisions and strategies.</p>
+        </section>
 
-    <div class="loading js-loading is-hidden">
-      <div class="loading-spinner">
-        <svg><circle cx="25" cy="25" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg>
-      </div>
-    </div>
+        <section id="skills" class="my-8">
+            <h2 class="text-3xl font-bold mb-4">Skills</h2>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>Data Analysis</li>
+                <li>Data Science</li>
+                <li>AI Science</li>
+                <li>Machine Learning</li>
+                <li>AI Strategy</li>
+            </ul>
+        </section>
 
-    <p class="js-success-message is-hidden">Success!</p>
-    <p class="js-error-message is-hidden">Error!</p>
-  </div>
+        <section id="contact" class="my-8">
+            <h2 class="text-3xl font-bold mb-4">Contact</h2>
+            <form id="contact-form" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium">Name</label>
+                    <input type="text" id="name" name="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium">Email</label>
+                    <input type="email" id="email" name="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium">Message</label>
+                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Send</button>
+            </form>
+        </section>
+    </main>
 
-  <a href="https://docs.google.com/spreadsheets/d/16vDPkBwtMNNMzgbmKfxfOEqGZhtfJha097ZKB23dZdc/edit?usp=sharing" target="_blank">View the Google Sheet</a>
-  <a href="https://github.com/jamiewilson/form-to-google-sheets" target="_blank">View on GitHub</a>
+    <footer class="bg-white shadow-md mt-8 p-4">
+        <div class="container mx-auto text-center">
+            &copy; 2024 Data Scientist Portfolio. All rights reserved.
+        </div>
+    </footer>
 
-  <script>
-    const scriptURL = 'https://script.google.com/a/stylesheets.co/macros/s/AKfycbzl3hk6JfWqMkVz8S1p5Txky_fscyNWJUCuQQHGHfVP5YLH99A/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const loading = document.querySelector('.js-loading')
-    const successMessage = document.querySelector('.js-success-message')
-    const errorMessage = document.querySelector('.js-error-message')
-
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      showLoadingIndicator()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => showSuccessMessage(response))
-        .catch(error => showErrorMessage(error))
-    })
-
-    function showLoadingIndicator () {
-      form.classList.add('is-hidden')
-      loading.classList.remove('is-hidden')
-    }
-
-    function showSuccessMessage (response) {
-      console.log('Success!', response)
-      setTimeout(() => {
-        successMessage.classList.remove('is-hidden')
-        loading.classList.add('is-hidden')
-      }, 500)
-    }
-
-    function showErrorMessage (error) {
-      console.error('Error!', error.message)
-      setTimeout(() => {
-        errorMessage.classList.remove('is-hidden')
-        loading.classList.add('is-hidden')
-      }, 500)
-    }
-  </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
