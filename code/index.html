@@ -3,113 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/logo.jpg" class="Logo">
-                <ul>
-                    <li><a href="#about-me">home</a></li>
-                    <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#services">My Services</a></li>
-                    <li><a href="#work">My Projects</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
-                </ul>
-            </nav>
+        <a href="#" class="logo"><span>Olad</span>imeji..</a>
+        
+            <nav class="navbar">
+                <a href="#" class="active">Portfolio</a>
+                <a href="#">Services</a>
+                <a href="#">Experience</a>
+                <a href="#">Education</a>
+                <a href="#">Project</a>
+            </nav>        
+            <a href="#" class="contact">Contact Me</a>
         </div>
-    </div>
-    
-    <main>
-        <section id="home">
-            <h1>Welcome to My Personal Website</h1>
-            <img src="images/hero-image.jpg" alt="Hero Image">
-        </section>
-        
-        <section id="about-me">
-            <h2>About Me</h2>
-            <div class="tabs">
-                <button class="tab-link" onclick="openTab(event, 'skills')">Skills</button>
-                <button class="tab-link" onclick="openTab(event, 'experience')">Experience</button>
-                <button class="tab-link" onclick="openTab(event, 'education')">Education</button>
-            </div>
-            <div id="skills" class="tab-content">
-                <h3>Skills</h3>
-                <p>Details about skills...</p>
-            </div>
-            <div id="experience" class="tab-content">
-                <h3>Experience</h3>
-                <p>Details about experience...</p>
-            </div>
-            <div id="education" class="tab-content">
-                <h3>Education</h3>
-                <p>Details about education...</p>
-            </div>
-        </section>
-        
-        <section id="services">
-            <h2>My Services</h2>
-            <div class="service">
-                <img src="images/service1.jpg" alt="Service 1">
-                <h3>Service 1</h3>
-                <p>Description of Service 1...</p>
-            </div>
-            <div class="service">
-                <img src="images/service2.jpg" alt="Service 2">
-                <h3>Service 2</h3>
-                <p>Description of Service 2...</p>
-            </div>
-            <div class="service">
-                <img src="images/service3.jpg" alt="Service 3">
-                <h3>Service 3</h3>
-                <p>Description of Service 3...</p>
-            </div>
-        </section>
-        
-        <section id="work">
-            <h2>My Work</h2>
-            <div class="work-item">
-                <img src="images/work1.jpg" alt="Work 1">
-                <h3>Project 1</h3>
-                <p>Description of Project 1...</p>
-            </div>
-            <div class="work-item">
-                <img src="images/work2.jpg" alt="Work 2">
-                <h3>Project 2</h3>
-                <p>Description of Project 2...</p>
-            </div>
-            <div class="work-item">
-                <img src="images/work3.jpg" alt="Work 3">
-                <h3>Project 3</h3>
-                <p>Description of Project 3...</p>
-            </div>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message"></textarea>
-                
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
-
-    <script src="scripts.js"></script>
+    </div>    
 </body>
 </html>
