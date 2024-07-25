@@ -1,0 +1,83 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f7f7;
+  color: #4a4a4a;
+}
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+.hover-effect:hover {
+  background-color: #ff77a9;
+  color: #ffffff;
+}
+.hover-effect:hover i {
+  color: #ffffff;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+.tab-button {
+  cursor: pointer;
+}
+.tab-button.active {
+  border-bottom: 2px solid #68a0ff;
+}
+.logo-color1 {
+  color: #68a0ff;
+}
+.logo-color2 {
+  color: #ff77a9;
+}
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.carousel-item {
+  min-width: 300px;
+  scroll-snap-align: start;
+  margin-right: 16px;
+}
+@media (max-width: 768px) {
+  .carousel-item {
+      min-width: 250px;
+  }
+}
+#mobile-menu {
+  display: none;
+}
+@media (max-width: 768px) {
+  #mobile-menu {
+      display: flex;
+      flex-direction: column;
+  }
+}
+.progress-bar {
+  background-color: #e5e7eb;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.progress-bar-inner {
+  height: 1rem;
+  background-color: #68a0ff;
+  text-align: right;
+  padding-right: 0.5rem;
+  color: white;
+  border-radius: 0.375rem;
+}
+.bg-primary {
+  background-color: #68a0ff;
+}
+.text-primary {
+  color: #68a0ff;
+}
+.bg-accent {
+  background-color: #ff77a9;
+}
+.text-accent {
+  color: #ff77a9;
+}
